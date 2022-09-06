@@ -1,5 +1,13 @@
 package ujian.ujiankedua;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import static org.testng.Assert.assertEquals;
 
 import java.util.Random;
@@ -36,13 +44,13 @@ public class TestMatematika {
 	
 	@BeforeClass
 	   public void beforeClass() {
-		System.out.println("Ini Adalah Before Class");
+		System.out.println("Ini Adalah Before Class Test MAtematika");
 		System.out.println("===========================================================================");
 	   }
 	
 	@BeforeMethod
 	   public void beforeMethod() {
-		System.out.println("Ini Adalah Before Method Yang Ke : " + loopBefore);
+		System.out.println("Ini Adalah Before Method Test MAtematika Yang Ke : " + loopBefore);
 		System.out.println("===========================================================================");
 		loopBefore ++;	
 	   }
@@ -58,7 +66,7 @@ public class TestMatematika {
 		dataDua = rand.nextDouble(indexAwal, indexAkhir);
 		System.out.println("Ini Adalah Nilai dataSatu : " + dataSatu);
 		System.out.println("Ini Adalah Nilai dataDua : " + dataDua);
-		assertEquals(mtk.tambahNilaiActual(dataSatu, dataDua), mtk.tambahNilaiExpect(dataSatu, dataDua));
+		AssertJUnit.assertEquals(mtk.tambahNilaiActual(dataSatu, dataDua), mtk.tambahNilaiExpect(dataSatu, dataDua));
 		System.out.println("===========================================================================");
 	}
 	
@@ -73,7 +81,7 @@ public class TestMatematika {
 		dataDua = rand.nextDouble(indexAwal, indexAkhir);
 		System.out.println("Ini Adalah Nilai dataSatu : " + dataSatu);
 		System.out.println("Ini Adalah Nilai dataDua : " + dataDua);
-		assertEquals(mtk.kurangNilaiActual(dataSatu, dataDua), mtk.kurangNilaiExpect(dataSatu, dataDua));
+		AssertJUnit.assertEquals(mtk.kurangNilaiActual(dataSatu, dataDua), mtk.kurangNilaiExpect(dataSatu, dataDua));
 		System.out.println("===========================================================================");
 	}
 	
@@ -88,7 +96,7 @@ public class TestMatematika {
 		dataDua = rand.nextDouble(indexAwal, indexAkhir);
 		System.out.println("Ini Adalah Nilai dataSatu : " + dataSatu);
 		System.out.println("Ini Adalah Nilai dataDua : " + dataDua);
-		assertEquals(mtk.bagiNilaiActual(dataSatu, dataDua), mtk.bagiNilaiExpect(dataSatu, dataDua));
+		AssertJUnit.assertEquals(mtk.bagiNilaiActual(dataSatu, dataDua), mtk.bagiNilaiExpect(dataSatu, dataDua));
 		System.out.println("===========================================================================");
 	}
 	
@@ -105,21 +113,21 @@ public class TestMatematika {
 		dataDua = rand.nextInt(idxAwal, idxAkhir);
 		System.out.println("Ini Adalah Nilai dataSatu : " + dataSatu);
 		System.out.println("Ini Adalah Nilai dataDua : " + dataDua);
-		assertEquals(mtk.modulusNilaiActual(dataSatu, dataDua), mtk.modulusNilaiExpect(dataSatu, dataDua));
+		AssertJUnit.assertEquals(mtk.modulusNilaiActual(dataSatu, dataDua), mtk.modulusNilaiExpect(dataSatu, dataDua));
 		System.out.println("===========================================================================");
 	}
 	
 	
 	 @AfterMethod
 	   public void afterMethod() {
-		 System.out.println("Ini Adalah After Method Yang Ke : " + loopAfter);
+		 System.out.println("Ini Adalah After Method Test MAtematika Yang Ke : " + loopAfter);
 		 System.out.println("===========================================================================");
 		 loopAfter ++;
 	   }
 	 
 	 @AfterClass
 	   public void afterClass() {
-		 System.out.println("Ini Adalah After Class");
+		 System.out.println("Ini Adalah After Class Test MAtematika");
 		 System.out.println("===========================================================================");
 	   }
 	 

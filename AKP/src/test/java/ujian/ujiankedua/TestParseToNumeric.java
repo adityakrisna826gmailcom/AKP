@@ -1,5 +1,9 @@
 package ujian.ujiankedua;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import static org.testng.Assert.assertEquals;
 
 import java.util.Scanner;
@@ -31,13 +35,13 @@ public class TestParseToNumeric {
 	
 	@BeforeClass
 	   public void beforeClass() {
-		System.out.println("Ini Adalah Before Class");
+		System.out.println("Ini Adalah Before Class Test Parse To Numeric");
 		System.out.println("===========================================================================");
 	   }
 	
 	@BeforeMethod
 	   public void beforeMethod() {
-		System.out.println("Ini Adalah Before Method Yang Ke : " + loopBefore);
+		System.out.println("Ini Adalah Before Method Test Parse To Numeric Yang Ke : " + loopBefore);
 		System.out.println("===========================================================================");
 		loopBefore ++;	
 	   }
@@ -47,7 +51,7 @@ public class TestParseToNumeric {
 	{
 		System.out.println("Masukkan Data String : ");
 		strInput = scn.nextLine();
-		assertEquals(a.parseToIntActual(strInput), a.parseToIntExpect(strInput));
+		AssertJUnit.assertEquals(a.parseToIntActual(strInput), a.parseToIntExpect(strInput));
 	}
 	
 	@Test
@@ -55,19 +59,19 @@ public class TestParseToNumeric {
 	{
 		System.out.println("Masukkan Data String : ");
 		strInput = scn.nextLine();
-		assertEquals(a.parseToLongActual(strInput), a.parseToLongExpect(strInput));
+		AssertJUnit.assertEquals(a.parseToLongActual(strInput), a.parseToLongExpect(strInput));
 	}
 	
 	@AfterMethod
 	   public void afterMethod() {
-		 System.out.println("Ini Adalah After Method Yang Ke : " + loopAfter);
+		 System.out.println("Ini Adalah After Method Test Parse To Numeric Yang Ke : " + loopAfter);
 		 System.out.println("===========================================================================");
 		 loopAfter ++;
 	   }
 	 
 	 @AfterClass
 	   public void afterClass() {
-		 System.out.println("Ini Adalah After Class");
+		 System.out.println("Ini Adalah After Class Test Parse To Numeric");
 		 System.out.println("===========================================================================");
 	   }
 	 
