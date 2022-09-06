@@ -3,9 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="ujian.ujiankedua.TestMatematika"/>
-      <class name="ujian.ujiankedua.TestGeometry"/>
-      <class name="ujian.ujiankedua.TestParseToNumeric"/>
+      <class name="ujian.ujiankedua.TestCalculator"/>
+      <class name="ujian.ujiankedua.TestSortAlgoDynamic"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

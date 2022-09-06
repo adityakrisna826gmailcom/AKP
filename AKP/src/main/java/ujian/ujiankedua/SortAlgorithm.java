@@ -19,7 +19,8 @@ StringBuilder sBuild = new StringBuilder();
             bef = sBuild.append(num).append(",").toString();//INPUT DATA ARRAY 1 PER 1 
         }
 
-//        System.out.print(bef.substring(0,bef.length()-1));//MENGHILANGKAN TANDA KOMA TERAKHIR, LALU PRINT ISI VARIABEL bef
+        System.out.print(bef.substring(0,bef.length()-1)+ "  -> Data Random");
+        System.out.println();
 
         //logic
         for(int i = 0 ; i < nums.length ; i++)
@@ -62,11 +63,10 @@ StringBuilder sBuild = new StringBuilder();
         sBuild.setLength(0);
         //before
 //        System.out.println("\n====BEFORE====");
-        for (double num:nums)
+        for (int num:nums)
         {
-            bef = sBuild.append(num).append(",").toString();
+        	bef = sBuild.append(num).append(",").toString();
         }
-//        System.out.print(bef.substring(0,bef.length()-1));
         
         //logic
         for (int i =0 ; i < nums.length ; i++ )
