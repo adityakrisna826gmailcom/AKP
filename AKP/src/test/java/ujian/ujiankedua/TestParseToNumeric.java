@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.AssertJUnit;
 import static org.testng.Assert.assertEquals;
 
+import java.util.Random;
 import java.util.Scanner;
 
 import org.testng.annotations.AfterClass;
@@ -25,6 +26,7 @@ public class TestParseToNumeric {
 	int loopBefore = 1;
 	int loopAfter = 1;
 	ParseToNumeric a;
+	Random rand;
 	
 	@BeforeTest
 	   public void beforeTest() {
