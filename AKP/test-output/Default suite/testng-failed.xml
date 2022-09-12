@@ -3,18 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ujian.ujiankedua.TestSortAlgoDynamic">
+      <class name="latihan.restassured.SampleRestAssured">
         <methods>
-          <include name="befMethod"/>
-          <include name="aftMethod"/>
-          <include name="befClass"/>
-          <include name="aftClass"/>
-          <include name="testKedua"/>
           <include name="befTest"/>
-          <include name="aftTest"/>
-          <include name="testPertama"/>
+          <include name="testPost"/>
         </methods>
-      </class> <!-- ujian.ujiankedua.TestSortAlgoDynamic -->
+      </class> <!-- latihan.restassured.SampleRestAssured -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
