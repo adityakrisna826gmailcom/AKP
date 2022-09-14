@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="latihan.restassured.SampleRestAssured">
+      <class name="tugas.selenium.formy.RadioButtons">
         <methods>
-          <include name="befTest"/>
-          <include name="testPost"/>
+          <include name="testRadioButtons"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- latihan.restassured.SampleRestAssured -->
+      </class> <!-- tugas.selenium.formy.RadioButtons -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

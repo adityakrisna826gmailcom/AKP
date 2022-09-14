@@ -3,8 +3,12 @@ package tugas.selenium.formy;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.*;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -16,9 +20,10 @@ public class Autocomplete {
 
   @BeforeClass(alwaysRun = true)
   public void setUp() throws Exception {
-    driver = new FirefoxDriver();
+	WebDriverManager.chromedriver().setup();
+//    driver = new FirefoxDriver();
+	driver = new ChromeDriver();
     baseUrl = "https://www.google.com/";
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @Test
@@ -29,7 +34,6 @@ public class Autocomplete {
     driver.findElement(By.id("autocomplete")).sendKeys("jl. kura kura");
     driver.findElement(By.id("autocomplete")).sendKeys(Keys.ENTER);
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Autocomplete'])[2]/following::div[1]")).click();
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Do you own this website?'])[1]/following::button[1]")).click();
     driver.findElement(By.id("street_number")).click();
     driver.findElement(By.id("street_number")).clear();
     driver.findElement(By.id("street_number")).sendKeys("jl. cendrawasih");

@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class EnableAndDisable {
+public class RadioButtons {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -27,29 +27,18 @@ public class EnableAndDisable {
   }
 
   @Test
-  public void testEnableAndDisable() throws Exception {
-    driver.get("https://formy-project.herokuapp.com/enabled");
-    driver.findElement(By.id("input")).click();
-    driver.findElement(By.id("input")).clear();
-    Thread.sleep(500);
-    driver.findElement(By.id("input")).sendKeys("Warning!!!");
-    Thread.sleep(500);
-    driver.findElement(By.id("input")).sendKeys(Keys.ENTER);
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Complete Web Form'])[1]/following::h1[1]")).click();
-    driver.findElement(By.id("input")).click();
-    driver.findElement(By.id("input")).clear();
-    driver.findElement(By.id("input")).sendKeys("");
-    driver.findElement(By.id("input")).clear();
-    Thread.sleep(500);
-    driver.findElement(By.id("input")).sendKeys("Password Salah!!!");
-    Thread.sleep(500);
-    driver.findElement(By.id("input")).sendKeys(Keys.ENTER);
-    driver.findElement(By.id("input")).clear();
-    Thread.sleep(500);
-    driver.findElement(By.id("input")).sendKeys("Coba Lagi!!!");
-    Thread.sleep(500);
-    driver.findElement(By.id("input")).sendKeys(Keys.ENTER);
-    driver.findElement(By.xpath("//*/text()[normalize-space(.)='']/parent::*")).click();
+  public void testRadioButtons() throws Exception {
+    driver.get("https://formy-project.herokuapp.com/radiobutton");
+    driver.findElement(By.xpath("//div[2]/input")).click();
+    driver.findElement(By.xpath("//div[3]/input")).click();
+    driver.findElement(By.xpath("//div[3]/input")).click();
+    driver.findElement(By.xpath("//div[2]/input")).click();
+    driver.findElement(By.id("radio-button-1")).click();
+    driver.findElement(By.xpath("//div[2]/input")).click();
+    driver.findElement(By.xpath("//div[3]/input")).click();
+    driver.findElement(By.id("radio-button-1")).click();
+    driver.findElement(By.id("radio-button-1")).click();
+    driver.findElement(By.id("logo")).click();
   }
 
   @AfterClass(alwaysRun = true)
@@ -94,4 +83,3 @@ public class EnableAndDisable {
     }
   }
 }
-

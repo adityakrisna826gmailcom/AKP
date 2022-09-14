@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class EnableAndDisable {
+public class PageScroll {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -27,29 +27,25 @@ public class EnableAndDisable {
   }
 
   @Test
-  public void testEnableAndDisable() throws Exception {
-    driver.get("https://formy-project.herokuapp.com/enabled");
-    driver.findElement(By.id("input")).click();
-    driver.findElement(By.id("input")).clear();
-    Thread.sleep(500);
-    driver.findElement(By.id("input")).sendKeys("Warning!!!");
-    Thread.sleep(500);
-    driver.findElement(By.id("input")).sendKeys(Keys.ENTER);
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Complete Web Form'])[1]/following::h1[1]")).click();
-    driver.findElement(By.id("input")).click();
-    driver.findElement(By.id("input")).clear();
-    driver.findElement(By.id("input")).sendKeys("");
-    driver.findElement(By.id("input")).clear();
-    Thread.sleep(500);
-    driver.findElement(By.id("input")).sendKeys("Password Salah!!!");
-    Thread.sleep(500);
-    driver.findElement(By.id("input")).sendKeys(Keys.ENTER);
-    driver.findElement(By.id("input")).clear();
-    Thread.sleep(500);
-    driver.findElement(By.id("input")).sendKeys("Coba Lagi!!!");
-    Thread.sleep(500);
-    driver.findElement(By.id("input")).sendKeys(Keys.ENTER);
-    driver.findElement(By.xpath("//*/text()[normalize-space(.)='']/parent::*")).click();
+  public void testPageScroll() throws Exception {
+    driver.get("https://formy-project.herokuapp.com/scroll");
+    driver.findElement(By.id("name")).click();
+    driver.findElement(By.id("name")).clear();
+    driver.findElement(By.id("name")).sendKeys("Aditya Krisna Pamungkas");
+    driver.findElement(By.id("date")).click();
+    driver.findElement(By.id("date")).clear();
+    driver.findElement(By.id("date")).sendKeys("10/12/2002");
+    driver.findElement(By.id("date")).sendKeys(Keys.ENTER);
+    driver.findElement(By.id("name")).click();
+    driver.findElement(By.id("name")).clear();
+    driver.findElement(By.id("name")).sendKeys("Pamungkas");
+    driver.findElement(By.id("date")).click();
+    driver.findElement(By.id("date")).clear();
+    driver.findElement(By.id("date")).sendKeys("9/14/2022");
+    driver.findElement(By.id("date")).sendKeys(Keys.ENTER);
+    driver.findElement(By.id("date")).clear();
+    driver.findElement(By.id("date")).sendKeys("20/1/2000");
+    driver.findElement(By.id("date")).sendKeys(Keys.ENTER);
   }
 
   @AfterClass(alwaysRun = true)
@@ -94,4 +90,3 @@ public class EnableAndDisable {
     }
   }
 }
-
