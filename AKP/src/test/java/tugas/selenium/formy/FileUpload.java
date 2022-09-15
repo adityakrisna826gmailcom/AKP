@@ -1,6 +1,10 @@
 package tugas.selenium.formy;
 
 import java.util.regex.Pattern;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.*;
 
@@ -28,23 +32,30 @@ public class FileUpload {
 
   @Test
   public void testFileUpload() throws Exception {
-    driver.get("https://formy-project.herokuapp.com/fileupload");
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='File upload'])[1]/following::button[1]")).click();
-    driver.findElement(By.xpath("//input[@type='file']")).clear();
-    driver.findElement(By.xpath("//input[@type='file']")).sendKeys("C:\\fakepath\\Array-Pada-Java.pdf");
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Choose'])[1]/following::button[1]")).click();
-    driver.findElement(By.xpath("//input[@type='file']")).clear();
-    driver.findElement(By.xpath("//input[@type='file']")).sendKeys("C:\\fakepath\\Array-Pada-Java.pdf");
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Choose'])[1]/following::button[1]")).click();
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Choose'])[1]/following::button[1]")).click();
-    driver.findElement(By.xpath("//input[@type='file']")).clear();
-    driver.findElement(By.xpath("//input[@type='file']")).sendKeys("C:\\fakepath\\Array.txt");
-    driver.findElement(By.xpath("//input[@type='file']")).clear();
-    driver.findElement(By.xpath("//input[@type='file']")).sendKeys("C:\\fakepath\\Array-Pada-Java.pdf");
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='File upload'])[1]/following::button[1]")).click();
-    driver.findElement(By.xpath("//input[@type='file']")).clear();
-    driver.findElement(By.xpath("//input[@type='file']")).sendKeys("C:\\fakepath\\15.Lambda-Expression.pdf");
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Choose'])[1]/following::button[1]")).click();
+	  Robot robot = new Robot();
+	    driver.get("https://formy-project.herokuapp.com/fileupload");
+	    Thread.sleep(1000);
+	    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='File upload'])[1]/following::button[1]")).click();
+	    Thread.sleep(1000);
+	    
+	    StringSelection selection = new StringSelection("C:\\Users\\NEXSOFT\\Documents\\Bootcamp\\Ujian Week 2_Aditya Krisna Pamungkas.docx");
+	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection,null);
+	    Thread.sleep(1000);
+
+	    robot.keyPress(KeyEvent.VK_CONTROL);
+	    robot.keyPress(KeyEvent.VK_V);
+
+	    robot.keyRelease(KeyEvent.VK_CONTROL);
+	    robot.keyRelease(KeyEvent.VK_V);
+	    Thread.sleep(1000);
+
+	    robot.keyPress(KeyEvent.VK_ENTER);
+	    robot.keyRelease(KeyEvent.VK_ENTER);
+	    Thread.sleep(1000);
+	    
+	    driver.findElement(By.xpath("//button[normalize-space()='Reset']")).click();
+	    Thread.sleep(5000);
+    
   }
 
   @AfterClass(alwaysRun = true)

@@ -30,14 +30,23 @@ public class Modal {
   public void testModal() throws Exception {
     driver.get("https://formy-project.herokuapp.com/modal");
     driver.findElement(By.id("modal-button")).click();
+    Thread.sleep(1000);
     driver.findElement(By.xpath("//div[@id='exampleModal']/div/div/div[2]")).click();
+    Thread.sleep(1000);
     driver.findElement(By.xpath("//div[@id='exampleModal']/div/div/div[2]")).click();
+    Thread.sleep(1000);
     driver.findElement(By.id("ok-button")).click();
+    Thread.sleep(1000);
     driver.findElement(By.id("close-button")).click();
+    Thread.sleep(1000);
     driver.findElement(By.id("modal-button")).click();
+    Thread.sleep(1000);
     driver.findElement(By.xpath("//div[@id='exampleModal']/div/div/div[2]")).click();
+    Thread.sleep(1000);
     driver.findElement(By.id("ok-button")).click();
+    Thread.sleep(1000);
     driver.findElement(By.id("close-button")).click();
+    Thread.sleep(1000);
   }
 
   @AfterClass(alwaysRun = true)

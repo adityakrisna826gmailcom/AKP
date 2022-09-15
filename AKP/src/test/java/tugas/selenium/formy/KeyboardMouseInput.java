@@ -30,21 +30,33 @@ public class KeyboardMouseInput {
   public void testKeyboardMouseInput() throws Exception {
     driver.get("https://formy-project.herokuapp.com/keypress");
     driver.findElement(By.id("name")).click();
+    Thread.sleep(1000);
     driver.findElement(By.id("name")).clear();
     driver.findElement(By.id("name")).sendKeys("Aditya Krisna Pamungkas");
+    Thread.sleep(1000);
     driver.findElement(By.id("name")).sendKeys(Keys.ENTER);
+    Thread.sleep(1000);
     driver.findElement(By.id("name")).click();
+    Thread.sleep(1000);
     driver.findElement(By.id("name")).clear();
     driver.findElement(By.id("name")).sendKeys("Aditya");
+    Thread.sleep(1000);
     driver.findElement(By.id("name")).sendKeys(Keys.ENTER);
+    Thread.sleep(1000);
     driver.findElement(By.id("button")).click();
+    Thread.sleep(1000);
     driver.findElement(By.id("name")).click();
+    Thread.sleep(1000);
     driver.findElement(By.id("name")).clear();
     driver.findElement(By.id("name")).sendKeys("Aditya Krisna");
+    Thread.sleep(1000);
     driver.findElement(By.id("button")).click();
+    Thread.sleep(1000);
     driver.findElement(By.id("name")).click();
+    Thread.sleep(1000);
     driver.findElement(By.id("name")).clear();
     driver.findElement(By.id("name")).sendKeys("Aditya Krisna Pamungkas");
+    Thread.sleep(1000);
     driver.findElement(By.id("name")).sendKeys(Keys.ENTER);
   }
 

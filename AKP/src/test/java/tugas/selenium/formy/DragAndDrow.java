@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class DragAndDrown {
+public class DragAndDrow {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -27,17 +27,18 @@ public class DragAndDrown {
   }
 
   @Test
-  public void testDragAndDrown() throws Exception {
+  public void testDropdown() throws Exception {
     driver.get("https://formy-project.herokuapp.com/dragdrop");
     driver.findElement(By.xpath("//img[@alt='Selenium logo']")).click();
+    Thread.sleep(1000);
     driver.findElement(By.xpath("//img[@alt='Selenium logo']")).click();
-    driver.findElement(By.id("box")).click();
+    Thread.sleep(1000);
     driver.findElement(By.xpath("//img[@alt='Selenium logo']")).click();
+    Thread.sleep(1000);
     driver.findElement(By.xpath("//img[@alt='Selenium logo']")).click();
-    driver.findElement(By.xpath("//div[@id='box']/p")).click();
+    Thread.sleep(1000);
     driver.findElement(By.xpath("//img[@alt='Selenium logo']")).click();
-    driver.findElement(By.xpath("//img[@alt='Selenium logo']")).click();
-    driver.findElement(By.xpath("//img[@alt='Selenium logo']")).click();
+    Thread.sleep(1000);
   }
 
   @AfterClass(alwaysRun = true)

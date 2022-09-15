@@ -10,6 +10,7 @@ import static org.testng.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
 public class Autocomplete {
@@ -28,6 +29,9 @@ public class Autocomplete {
 
   @Test
   public void testAutocomplete() throws Exception {
+	  
+	  
+	  
     driver.get("https://formy-project.herokuapp.com/autocomplete");
     driver.findElement(By.id("autocomplete")).click();
     driver.findElement(By.id("autocomplete")).clear();

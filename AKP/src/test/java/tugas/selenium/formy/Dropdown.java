@@ -29,18 +29,27 @@ public class Dropdown {
   @Test
   public void testDropdown() throws Exception {
     driver.get("https://formy-project.herokuapp.com/dropdown");
+    Thread.sleep(1000);
     driver.findElement(By.id("dropdownMenuButton")).click();
-    driver.findElement(By.id("autocomplete")).click();
+    Thread.sleep(1000);
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Switch Window'])[2]/following::a[1]")).click();
+    Thread.sleep(1000);
+    driver.findElement(By.id("navbarDropdownMenuLink")).click();
+    Thread.sleep(1000);
+    driver.findElement(By.linkText("Dropdown")).click();
+    Thread.sleep(1000);
     driver.findElement(By.id("dropdownMenuButton")).click();
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Dropdown'])[3]/following::a[1]")).click();
-    driver.findElement(By.id("input")).click();
-    driver.findElement(By.id("input")).clear();
-    driver.findElement(By.id("input")).sendKeys("TestNG");
-    driver.findElement(By.id("input")).sendKeys(Keys.ENTER);
-    driver.findElement(By.id("dropdownMenuButton")).click();
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Dropdown'])[3]/following::a[1]")).click();
-    driver.findElement(By.id("dropdownMenuButton")).click();
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Enabled and disabled elements'])[2]/following::a[1]")).click();
+    Thread.sleep(1000);
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Page Scroll'])[2]/following::a[1]")).click();
+    Thread.sleep(1000);
+    driver.findElement(By.id("navbarDropdownMenuLink")).click();
+    Thread.sleep(1000);
+    driver.findElement(By.linkText("Buttons")).click();
+    Thread.sleep(1000);
+    driver.findElement(By.id("navbarDropdownMenuLink")).click();
+    Thread.sleep(1000);
+    driver.findElement(By.linkText("Dropdown")).click();
+    Thread.sleep(1000);
   }
 
   @AfterClass(alwaysRun = true)

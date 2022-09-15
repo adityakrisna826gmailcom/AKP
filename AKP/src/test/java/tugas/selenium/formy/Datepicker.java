@@ -34,21 +34,26 @@ public class Datepicker {
     driver.findElement(By.id("datepicker")).click();
     driver.findElement(By.id("datepicker")).clear();
     driver.findElement(By.id("datepicker")).sendKeys("10/12/1998");
+    Thread.sleep(2000);
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Sa'])[1]/following::td[16]")).click();
     driver.findElement(By.id("datepicker")).click();
     driver.findElement(By.id("datepicker")).clear();
     driver.findElement(By.id("datepicker")).sendKeys("1998/11/9");
+    Thread.sleep(2000);
     driver.findElement(By.id("datepicker")).sendKeys(Keys.ENTER);
     driver.findElement(By.id("datepicker")).clear();
     driver.findElement(By.id("datepicker")).sendKeys("1/2/2000");
+    Thread.sleep(2000);
     driver.findElement(By.id("datepicker")).sendKeys(Keys.ENTER);
     driver.findElement(By.id("datepicker")).click();
     driver.findElement(By.id("datepicker")).clear();
     driver.findElement(By.id("datepicker")).sendKeys("10/12/2022");
+    Thread.sleep(2000);
     driver.findElement(By.id("datepicker")).sendKeys(Keys.ENTER);
     driver.findElement(By.id("datepicker")).click();
     driver.findElement(By.id("datepicker")).clear();
     driver.findElement(By.id("datepicker")).sendKeys("09/14/2022");
+    Thread.sleep(2000);
     driver.findElement(By.id("datepicker")).sendKeys(Keys.ENTER);
   }
 

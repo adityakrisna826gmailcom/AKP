@@ -30,18 +30,24 @@ public class SwitchWindow {
   public void testSwitchWindow() throws Exception {
     driver.get("https://formy-project.herokuapp.com/switch-window");
     driver.findElement(By.id("alert-button")).click();
+    Thread.sleep(1000);
     assertEquals(closeAlertAndGetItsText(), "This is a test alert!");
+    Thread.sleep(1000);
     driver.findElement(By.id("new-tab-button")).click();
+    Thread.sleep(1000);
     // ERROR: Caught exception [ERROR: Unsupported command [selectWindow | win_ser_1 | ]]
     // ERROR: Caught exception [ERROR: Unsupported command [selectWindow | win_ser_local | ]]
     driver.findElement(By.id("alert-button")).click();
+    Thread.sleep(1000);
     assertEquals(closeAlertAndGetItsText(), "This is a test alert!");
     try {
+    	Thread.sleep(1000);
       assertEquals(driver.findElement(By.id("new-tab-button")).getText(), "Open new tab");
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
     try {
+    	Thread.sleep(1000);
       assertEquals(driver.getTitle(), "Formy");
     } catch (Error e) {
       verificationErrors.append(e.toString());
