@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tugas.selenium.demoqa.TestPracticeForm">
+      <class name="tugas.selenium.amazon.TestDemoAUT">
         <methods>
-          <include name="testPracticeForm"/>
-          <include name="closeBrowser"/>
           <include name="pageObjext"/>
+          <include name="testDemoAUT"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- tugas.selenium.demoqa.TestPracticeForm -->
+      </class> <!-- tugas.selenium.amazon.TestDemoAUT -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
