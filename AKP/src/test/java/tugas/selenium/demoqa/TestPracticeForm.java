@@ -1,5 +1,9 @@
 package tugas.selenium.demoqa;
 
+import static org.testng.Assert.assertTrue;
+
+import java.awt.AWTException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,8 +24,6 @@ public class TestPracticeForm {
 		driver = DriverSingleton.getDriver();
 		driver.get(Constants.URLPRACTICEFORM);
 		practiceFormPage = new PracticeFormPage();
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
-//		js.executeScript("window.scrollBy(0,-400)", "");
 	}
 	
 	@AfterMethod
@@ -31,7 +33,8 @@ public class TestPracticeForm {
 	}
 	
 	@Test
-	public void testPracticeForm() throws InterruptedException {
-		practiceFormPage.practiceForm("Aditya Krisna", "Pamungkas", "aditya@gmail.com", "0823456789");
+	public void testPracticeForm() throws InterruptedException, AWTException  {
+		practiceFormPage.practiceForm("Aditya Krisna", "Pamungkas", "aditya@gmail.com", "0823456789", "12 Oct 1998", "Math", "C:\\Users\\NEXSOFT\\Pictures\\Screenshots\\Screenshot (9).png", "Jln. Boulevard");
+		assertTrue(practiceFormPage.getTxtClose().contains("Close"));
 	}
 }

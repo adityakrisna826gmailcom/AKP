@@ -23,8 +23,7 @@ public class TestDemoAUT {
 		driver = DriverSingleton.getDriver();
 		driver.get(Constants.URLAMAZON);
 		demoAUTPage = new DemoAUTPage();
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
-//		js.executeScript("window.scrollBy(0,-400)", "");
+
 	}
 	
 	@AfterMethod
@@ -33,11 +32,10 @@ public class TestDemoAUT {
 		DriverSingleton.closeObjectInstance();
 	}
 	
-//	, "Klaten", "adit@gmail.com", "123455", "Nexsoft", "OKE"
 	
 	@Test
 	public void testDemoAUT() throws InterruptedException {
 		demoAUTPage.demoAUT("Aditya Krisna", "Pamungkas","09/17/2022", "Klaten", "adit@gmail.com", "123455", "Nexsoft", "OKE");
-//		assertTrue(demoAUTPage.getTxtSukses().contains("Sukses"));
+		assertTrue(demoAUTPage.getTxtSukses().contains("Success"));
 	}
 }
