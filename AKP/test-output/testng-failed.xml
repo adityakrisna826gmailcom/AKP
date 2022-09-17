@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tugas.selenium.amazon.TestDemoAUT">
+      <class name="ujian.ujiankeempat.nopcommerce.TestLoginPage">
         <methods>
-          <include name="pageObjext"/>
-          <include name="testDemoAUT"/>
+          <include name="pageObject"/>
+          <include name="testValidLoginInvalidEmail"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- tugas.selenium.amazon.TestDemoAUT -->
+      </class> <!-- ujian.ujiankeempat.nopcommerce.TestLoginPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
