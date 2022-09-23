@@ -1,9 +1,13 @@
 package ujian.ujiankeempat.nopcommerce;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import tugas.selenium.demoqa.driver.connection.DriverSingleton;
 
@@ -41,6 +45,7 @@ public class LoginPage {
 	@FindBy(id = "Email-error")
 	private WebElement txtEmailError;
 	
+	
 	public void login() {
 		btnLogin.click();
 	}
@@ -51,21 +56,28 @@ public class LoginPage {
 	
 	public void loginInvalid(String emails, String password)
 	{
-		btnEmail.click();
+		btnEmail.click();	
 		btnEmail.clear();
 		this.email.sendKeys(emails);
 		btnPassword.click();
 		btnPassword.clear();
 		this.password.sendKeys(password);
-		btnLogin.click();
+//		btnLogin.click();
 	}
+	
 	
 	public String getTxtError() {
-		return txtError.getText();
+		String txt = new WebDriverWait(driver, Duration.ofSeconds(10))
+				.until(ExpectedConditions.visibilityOf(txtError)).getText();
+		
+		return txt;
+
 	}
 	
-	public String getEmailError()
-	{
-		return txtEmailError.getText();
-	}
+//	public String getEmailError()
+//	{
+//		return txtEmailError.getText();
+//	}
+//	
+	
 }

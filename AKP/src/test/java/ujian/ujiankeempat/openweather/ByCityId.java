@@ -20,6 +20,7 @@ public class ByCityId {
 	private int intColumnNums;
 	private int intRowNums;
 	private JSONObject req ;
+	
 	@BeforeTest
 	public void befTest()
 	{

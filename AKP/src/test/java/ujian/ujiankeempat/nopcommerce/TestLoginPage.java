@@ -37,27 +37,27 @@ public class TestLoginPage {
 		assertEquals(loginPage.getTxtDash(), "Dashboard");
 	}
 	
-	@Test(priority = 1)
-	public void testValidLoginInvalid() {
-		loginPage.loginInvalid("admin@yourstore.com", "");
-		assertTrue(loginPage.getTxtError().contains("unsuccessful"));
-	}
-	
-	@Test(priority = 2)
-	public void testInvalidPassword() {
-		loginPage.loginInvalid("admin@yourstore.com", "salah");
-		assertTrue(loginPage.getTxtError().contains("unsuccessful"));
-	}
-	
-	@Test(priority = 3)
-	public void testEmailKosong() {
-		loginPage.loginInvalid("", "");
-		assertTrue(loginPage.getEmailError().contains("Please"));
-	}
-	
-	@Test(priority = 4)
-	public void testInvalidEmail() {
-		loginPage.loginInvalid("adit", "");
-		assertTrue(loginPage.getEmailError().contains("Wrong"));
-	}
+//	@Test(priority = 1)
+//	public void testValidLoginInvalid() {
+//		loginPage.loginInvalid("admin@yourstore.com", "");
+//		assertTrue(loginPage.getTxtError().contains("unsuccessful"));
+//	}
+//		
+//	@Test(priority = 2)
+//	public void testInvalidPassword() {
+//		loginPage.loginInvalid("admin@yourstore.com", "salah");
+//		assertTrue(loginPage.getTxtError().contains("unsuccessful"));
+//	}
+//	
+//	@Test(priority = 3)
+//	public void testEmailKosong() {
+//		loginPage.loginInvalid("", "");
+//		assertTrue(loginPage.getEmailError().contains("Please"));
+//	}
+//	
+//	@Test(priority = 4)
+//	public void testInvalidEmail() {
+//		loginPage.loginInvalid("adit", "");
+//		assertTrue(loginPage.getEmailError().contains("Wrong"));
+//	}
 }
