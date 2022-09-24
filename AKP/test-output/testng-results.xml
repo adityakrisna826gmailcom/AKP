@@ -1,11 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-23T16:10:09 WIB" name="Default suite" finished-at="2022-09-23T16:10:09 WIB" duration-ms="23">
+  <suite started-at="2022-09-24T00:34:33 WIB" name="Default suite" finished-at="2022-09-24T00:34:33 WIB" duration-ms="113">
     <groups>
     </groups>
-    <test started-at="2022-09-23T16:10:09 WIB" name="Default test" finished-at="2022-09-23T16:10:09 WIB" duration-ms="23">
+    <test started-at="2022-09-24T00:34:33 WIB" name="Default test" finished-at="2022-09-24T00:34:33 WIB" duration-ms="113">
+      <class name="ujian.ujiankelima.testng.TestParseStringToNumeric">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="beforeTest" finished-at="2022-09-24T00:34:33 WIB" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="beforeClass" finished-at="2022-09-24T00:34:33 WIB" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="beforeMethod" finished-at="2022-09-24T00:34:33 WIB" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testParseToInt()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="testParseToInt" finished-at="2022-09-24T00:34:33 WIB" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseToInt -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="afterMethod" finished-at="2022-09-24T00:34:33 WIB" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="beforeMethod" finished-at="2022-09-24T00:34:33 WIB" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testParseToLong()[pri:1, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="testParseToLong" finished-at="2022-09-24T00:34:33 WIB" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseToLong -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="afterMethod" finished-at="2022-09-24T00:34:33 WIB" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="testParseToByte()[pri:2, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="testParseToByte" finished-at="2022-09-24T00:34:33 WIB" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseToByte -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="beforeMethod" finished-at="2022-09-24T00:34:33 WIB" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="afterMethod" finished-at="2022-09-24T00:34:33 WIB" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="beforeMethod" finished-at="2022-09-24T00:34:33 WIB" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testParseToShort()[pri:3, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="testParseToShort" finished-at="2022-09-24T00:34:33 WIB" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseToShort -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="afterMethod" finished-at="2022-09-24T00:34:33 WIB" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="testParseToFloat()[pri:4, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="testParseToFloat" finished-at="2022-09-24T00:34:33 WIB" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseToFloat -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="beforeMethod" finished-at="2022-09-24T00:34:33 WIB" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="afterMethod" finished-at="2022-09-24T00:34:33 WIB" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="beforeMethod" finished-at="2022-09-24T00:34:33 WIB" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testParseToDouble()[pri:5, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="testParseToDouble" finished-at="2022-09-24T00:34:33 WIB" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseToDouble -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="afterMethod" finished-at="2022-09-24T00:34:33 WIB" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="afterClass" finished-at="2022-09-24T00:34:33 WIB" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:ujian.ujiankelima.testng.TestParseStringToNumeric@534a5a98]" started-at="2022-09-24T00:34:33 WIB" name="afterTest" finished-at="2022-09-24T00:34:33 WIB" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- ujian.ujiankelima.testng.TestParseStringToNumeric -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

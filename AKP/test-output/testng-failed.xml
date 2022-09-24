@@ -3,13 +3,22 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="latihan.cucumber.framework.runner.hrmscobaoutline.LoginRunner">
+      <class name="ujian.ujiankelima.testng.TestParseStringToNumeric">
         <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="4 5"/>
-          <include name="tearDownClass"/>
+          <include name="testParseToShort"/>
+          <include name="testParseToDouble"/>
+          <include name="afterClass"/>
+          <include name="beforeMethod"/>
+          <include name="testParseToByte"/>
+          <include name="testParseToFloat"/>
+          <include name="beforeClass"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="testParseToInt"/>
+          <include name="afterTest"/>
+          <include name="testParseToLong"/>
         </methods>
-      </class> <!-- latihan.cucumber.framework.runner.hrmscobaoutline.LoginRunner -->
+      </class> <!-- ujian.ujiankelima.testng.TestParseStringToNumeric -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
