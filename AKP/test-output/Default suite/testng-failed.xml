@@ -3,22 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ujian.ujiankelima.testng.TestParseStringToNumeric">
+      <class name="ujian.ujiankelima.cucumber.DemoQARunner">
         <methods>
-          <include name="testParseToShort"/>
-          <include name="testParseToDouble"/>
-          <include name="afterClass"/>
-          <include name="beforeMethod"/>
-          <include name="testParseToByte"/>
-          <include name="testParseToFloat"/>
-          <include name="beforeClass"/>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="testParseToInt"/>
-          <include name="afterTest"/>
-          <include name="testParseToLong"/>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="5 6 7"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- ujian.ujiankelima.testng.TestParseStringToNumeric -->
+      </class> <!-- ujian.ujiankelima.cucumber.DemoQARunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

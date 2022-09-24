@@ -9,13 +9,10 @@ public class IOException {
 
 	public static void main(String[] args) {
 		FileInputStream inFile = null;
-		byte[] byteOfFile = null;
-		FileOutputStream outFile = null;	
+		byte[] byteOfFile = null;	
 		try {
 			inFile = new FileInputStream("C:\\Users\\NEXSOFT\\Documents\\Bootcamp\\Databased.txt");
-			outFile = new FileOutputStream("C:\\Users\\NEXSOFT\\Documents\\Bootcamp\\APIN.txt");
 			inFile.close();
-	        outFile.close();
 		}catch(Exception e)
 		{
 			System.out.println("FILE TIDAK DITEMUKAN !!");

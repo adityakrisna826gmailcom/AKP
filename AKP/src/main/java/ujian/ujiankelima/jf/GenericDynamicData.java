@@ -7,21 +7,27 @@ public class GenericDynamicData {
 	public static void main(String[] args) 
 	{
 		Random rand = new Random();
+		int intIndexAwal = 0;
+		int intIndexAkhir = 0;
+		
+		double douIndexAwal = 0;
+		double douIndexAkhir = 0;
+		
 		int intJumlahData = rand.nextInt(1,10);
 		
 		System.out.println("Soal Nomor 1");
 		System.out.println("Banyak Data : " + intJumlahData);
 		System.out.println("================================");
-		dataInteger(intJumlahData);
+		dataInteger(intJumlahData, intIndexAwal, intIndexAkhir);
 		System.out.println("================================");
-		dataDouble(intJumlahData);
+		dataDouble(intJumlahData, douIndexAwal, douIndexAkhir);
 	}
 	
-	public static void dataInteger(int intJumlahData)
+	public static void dataInteger(int intJumlahData, int intIndexAwal, int intIndexAkhir)
 	{
 		Random rand = new Random();
-		int intIndexAwal = rand.nextInt(1,10);
-		int intIndexAkhir = rand.nextInt(11,20);
+		intIndexAwal = rand.nextInt(1,10);
+		intIndexAkhir = rand.nextInt(11,20);
 		int [] intNext;
 		intNext = new int[intJumlahData];
 		
@@ -32,11 +38,11 @@ public class GenericDynamicData {
 		}
 	}
 		
-	public static void dataDouble(int intJumlahData)
+	public static void dataDouble(int intJumlahData, double douIndexAwal, double douIndexAkhir)
 	{
 		Random rand = new Random();
-		double douIndexAwal = rand.nextDouble(1,10);
-		double douIndexAkhir = rand.nextDouble(11,20);
+		douIndexAwal = rand.nextDouble(1,10);
+		douIndexAkhir = rand.nextDouble(11,20);
 		double [] douNext;
 		douNext = new double[intJumlahData];
 		
