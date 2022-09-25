@@ -55,8 +55,8 @@ public class TestLoginPage {
 //		loginPage.clickBtnRememberMe();
 		loginPage.clickBtnRegister();
 //		assertEquals(loginPage.msgError());
-		String errorLogin = loginPage.msgErrorRegister(10);
-		assertTrue(errorLogin.contains("Error"));
+		String errorRegis = loginPage.msgErrorRegister(10);
+		assertTrue(errorRegis.contains("Error"));
 	}
 	
 	@Test (priority = 2)
@@ -64,24 +64,26 @@ public class TestLoginPage {
 //		loginPage.clickBtnDissmis();
 		loginPage.clickBtnSearch();
 		loginPage.searchPage("shoes");
-		String errorLogin = loginPage.msgShoes(10);
-		assertTrue(errorLogin.contains("SHOES"));
+		String search = loginPage.msgShoes(10);
+		assertTrue(search.contains("SHOES"));
 	}
 	
 	@Test (priority = 3)
 	public void shopPage() throws InterruptedException, AWTException  {
 		loginPage.addChartPage("black", "36");
-		String errorLogin = loginPage.msgShirt(10);
-		assertTrue(errorLogin.contains("black"));
+		String add = loginPage.msgShirt(10);
+		assertTrue(add.contains("black"));
 	}
 	
 	@Test (priority = 4)
 	public void hapusPage() throws InterruptedException, AWTException  {
 		loginPage.addChartPage("black", "36");
-		String errorLogin = loginPage.msgShirt(10);
-		assertTrue(errorLogin.contains("black"));
+		String add = loginPage.msgShirt(10);
+		assertTrue(add.contains("black"));
 		
 		loginPage.clickBtnHome();
+		String hapus = loginPage.msgValid(10);
+		assertTrue(hapus.contains("removed"));
 	}
 	
 }
